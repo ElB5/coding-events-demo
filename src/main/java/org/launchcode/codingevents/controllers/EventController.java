@@ -1,6 +1,7 @@
 package org.launchcode.codingevents.controllers;
 
 import org.launchcode.codingevents.data.EventRepository;
+import org.launchcode.codingevents.models.AbstractEntity;
 import org.launchcode.codingevents.models.Event;
 import org.launchcode.codingevents.models.EventType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import javax.validation.Valid;
  */
 @Controller
 @RequestMapping("events")
-public class EventController {
+public class EventController extends AbstractEntity {
 
     @Autowired
     private EventRepository eventRepository;
